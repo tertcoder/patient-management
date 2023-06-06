@@ -7,17 +7,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
   <title>Simple Tailwind Starter</title>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
-  <header class="py-6 px-3 text-center">
-    <h1 class="text-dark-gray text-xl font-semibold tracking-wider ">Patient Management</h1>
-  </header>
-  <main>
-    <div class="links">
+  <div class="flex">
+    <div class="h-screen bg-green-300 w-72">
+      <div class="flex flex-col h-full navigation__container">
+        <div class="w-full py-8 header">
+          <h1 class="mb-2 text-2xl font-bold tracking-widest text-center text-gray-700">
+            <span class="block">Student</span>
+            <span class="block">Management</span>
+          </h1>
+          <!-- <span class="block mx-auto border-b border-gray-700 w-52"></span> -->
+        </div>
 
+        <div class="flex flex-col gap-4 px-10 navigation__links">
+          <div class="overflow-hidden duration-150 rounded-lg nav__link link__1" data-tab="1">
+            <button
+              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Add
+              Student</button>
+          </div>
+          <div class="overflow-hidden duration-150 rounded-lg nav__link link__2" data-tab="2">
+            <button
+              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Students</button>
+          </div>
+          <div class="overflow-hidden duration-150 rounded-lg nav__link link__3" data-tab="3">
+            <button
+              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">History</button>
+          </div>
+          <div class="overflow-hidden duration-150 rounded-lg nav__link link__4" data-tab="4">
+            <button
+              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Paid
+              Student</button>
+          </div>
+          <div class="overflow-hidden duration-150 rounded-lg nav__link link__5" data-tab="5">
+            <button
+              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Unpaid
+              Student</button>
+          </div>
+        </div>
+
+        <div class="w-full py-8 mt-auto logo">
+          <div
+            class="relative w-20 h-20 p-2 mx-auto text-2xl font-bold text-center text-green-300 bg-gray-700 rounded-full">
+            <span class="absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+              Logo
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
+    <div class="flex-1 content__block">
+      <section class="addStudent__section tab-content tab-content--active section__1">
+        <div class="min-h-screen ">
+          <div class="container pt-20 px-14">
+            <div class="mb-12 section__title">
+              <h1 class="mb-2 text-2xl font-bold tracking-widest text-center text-gray-700">Student Registration</h1>
+            </div>
+            <div class="student__form">
+              <div class="mb-2 form__require">
+                <p class="text-sm text-gray-700">*Provide all information of the new student</p>
+                <p class="text-sm text-gray-700">*Everything is required</p>
+              </div>
+              <div class="px-12 py-6 rounded-lg shadow-md info__form shadow-gray-700/20 ">
+                <div class="">
+                  <form action="#" method="post">
+                    <div class="flex gap-10 names">
+                      <label class="flex-1" for="firstname">
+                        <span class="block mb-1 text-gray-700">Firstname</span>
+                        <input type="text" id="firstname" placeholder="John"
+                          class="block w-full px-4 py-2 border border-gray-700 rounded-lg outline-none">
+                      </label>
+                      <label class="flex-1" for="lastname">
+                        <span class="block mb-1 text-gray-700">Lastname</span>
+                        <input type="text" id="lastname" placeholder="Hakizimana"
+                          class="block w-full px-4 py-2 border border-gray-700 rounded-lg outline-none">
+                      </label>
+                    </div>
+
+                    <div class="flex gap-10 mt-4 age">
+                      <label class="flex-1" for="birthday">
+                        <span class="block mb-1 text-gray-700">Day of Birth</span>
+                        <input type="date" id="birthday"
+                          class="block w-full px-4 py-2 border border-gray-700 rounded-lg outline-none">
+                      </label>
+                      <label class="flex-1" for="birthplace">
+                        <span class="block mb-1 text-gray-700">Place of Birth</span>
+                        <input type="text" id="birthplace" placeholder="Bujumbura, Burundi"
+                          class="block w-full px-4 py-2 border border-gray-700 rounded-lg outline-none">
+                      </label>
+                      <label class="w-24" for="birthplace">
+                        <span class="block mb-1 text-gray-700">Age</span>
+                        <input type="number" id="birthplace" placeholder="18"
+                          class="block w-full px-4 py-2 border border-gray-700 rounded-lg outline-none appearance-none">
+                      </label>
+                      <label class="flex-1" for="birthplace">
+                        <span class="block mb-1 text-gray-700">Gender</span>
+                        <select id="gender-select"
+                          class="block w-full px-4 py-2 bg-transparent border border-gray-700 rounded-lg outline-none appearance-none">
+                          <option value="">Select your gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="">Prefer not to say</option>
+                        </select>
+                      </label>
+                    </div>
+
+                    <div class="flex gap-10 mt-4 contact">
+                      <label class="flex-1" for="phone_number">
+                        <span class="block mb-1 text-gray-700">Phone number</span>
+                        <input type="text" id="phone_number" placeholder="+25761063535"
+                          class="block w-full px-4 py-2 border border-gray-700 rounded-lg outline-none">
+                      </label>
+                      <label class="flex-1" for="email">
+                        <span class="block mb-1 text-gray-700">Email</span>
+                        <input type="text" id="email" placeholder="johnhakiz@gmail.com"
+                          class="block w-full px-4 py-2 border border-gray-700 rounded-lg outline-none">
+                      </label>
+                    </div>
+                    <label for="profile" class="block mt-4 ">
+                      <span class="block mb-1 text-gray-700">Upload your profile</span>
+                      <div class="w-24 h-24 bg-gray-700 rounded-lg">
+                        <img src="" class="w-full">
+                      </div>
+                      <input type="file" id="profile" class="hidden opacity-0">
+                    </label>
+                    <button
+                      class="px-4 py-2 mt-6 font-bold tracking-wider text-gray-700 duration-150 ease-in-out bg-green-300 rounded-lg btn hover:bg-gray-700 hover:text-green-300">
+                      Add
+                      Student
+                    </button>
+                  </form>
+                </div>
+
+                <div class="flex items-center justify-center gap-5">
+                  <img src="svg/done.svg" alt="" class="w-16 h-16">
+                  <span class="text-xl font-bold text-gray-700">Student added successfully</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="currentStudent__section tab-content section__2">
+        <div class="flex-1 min-h-screen">
+          <div class="container pt-20 px-14">
+            <div class="mb-12 section__title">
+              <h1 class="mb-2 text-2xl font-bold tracking-widest text-center text-gray-700">Registered Students</h1>
+            </div>
+            <div class="mt-10 students">
+              <div
+                class="flex items-center justify-center gap-5 p-2 rounded-lg shadow-sm shadow-gray-700/20 student__container">
+                <div class="w-24 h-24 overflow-hidden border-4 border-green-300 rounded-full student__profile">
+                  <img src="svg/toussaint.jpeg" class="w-full" alt="profile">
+                </div>
+                <div class=" student__details">
+                  <div class="text-xl font-semibold text-gray-700 student__fullname">Toussaint Iradukunda</div>
+                  <div class=" text-gray-700/90">No 573920</div>
+                  <div class=" text-gray-700/90">Registered on June 6th, 2023</div>
+                  <div class=" text-gray-700/90">Bujumbura, Burundi</div>
+                </div>
+                <div class="ml-auto action">
+                  <button class="px-4 py-2 font-bold text-gray-700 bg-green-300 rounded-lg">Open</button>
+                  <button class="px-4 py-2 font-bold text-gray-700 bg-red-300 rounded-lg">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="history__section tab-content section__3">
+        boss
+      </section>
+      <section class="paidStudent__section tab-content section__4">
+        uramez
+      </section>
+      <section class="unpaidStudent__section tab-content section__5">
+        nezaa
+      </section>
+    </div>
+
 </body>
 
 </html>
