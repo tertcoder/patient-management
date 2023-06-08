@@ -12,7 +12,7 @@
 
 <body>
   <div class="flex">
-    <div class="h-screen bg-green-300 w-72">
+    <div class="min-h-screen bg-green-300 w-72">
       <div class="flex flex-col h-full navigation__container">
         <div class="w-full py-8 header">
           <h1 class="mb-2 text-2xl font-bold tracking-widest text-center text-gray-700">
@@ -152,7 +152,7 @@
         </div>
       </section>
       <section class="currentStudent__section tab-content section__2">
-        <div class="flex-1 min-h-screen">
+        <div class="flex-1 min-h-screen studentProfiles">
           <div class="container pt-20 px-14">
             <div class="mb-12 section__title">
               <h1 class="mb-2 text-2xl font-bold tracking-widest text-center text-gray-700">Registered Students</h1>
@@ -171,8 +171,92 @@
                 </div>
                 <div class="ml-auto action">
                   <button
-                    class="px-4 py-2 font-bold text-gray-700 duration-150 bg-green-300 rounded-lg hover:bg-gray-700 hover:text-green-300">Open</button>
+                    class="px-4 py-2 font-bold text-gray-700 duration-150 bg-green-300 rounded-lg hover:bg-gray-700 hover:text-green-300 btnOpen">Open</button>
                   <button class="px-4 py-2 font-bold text-gray-700 bg-red-300 rounded-lg">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-1 hidden studentProfile min-h-screen">
+          <div class="container pt-20 px-14">
+            <div class="mt-10 profile">
+              <div class="px-4 py-2 border-b border-gray-700">
+                <span class="text-xl font-bold text-gray-700">ID - 3849264</span>
+              </div>
+              <div class="p-4 pt-8 ">
+                <div class="flex items-center justify-center gap-10">
+                  <div class="w-48 h-48 overflow-hidden rounded-lg photo">
+                    <img src="svg/toussaint.jpeg" class="w-full" alt="">
+                  </div>
+                  <div class="flex-1">
+                    <div class="flex gap-10 ">
+                      <div>
+                        <div class="lastname ">
+                          <span class="block text-gray-700/75">Lastname:</span>
+                          <span class="block text-lg font-semibold text-gray-700">IRADUKUNDA</span>
+                        </div>
+                        <div class="firstname ">
+                          <span class="block text-gray-700/75">Firstname:</span>
+                          <span class="block text-lg font-semibold text-gray-700">Toussaint</span>
+                        </div>
+                        <div class="studentID ">
+                          <span class="block text-gray-700/75">Student ID:</span>
+                          <span class="block text-lg font-semibold text-gray-700">3849264</span>
+                        </div>
+                        <!--
+                        <div class="registered ">
+                          <span class="block text-gray-700/75">Registered day:</span>
+                          <span class="block text-lg font-semibold text-gray-700">June 7th, 2023</span>
+                        </div>
+                        -->
+                      </div>
+
+                      <div>
+                        <div class="birthday">
+                          <span class="block text-gray-700/75">Date of Birth:</span>
+                          <span class="block text-lg font-semibold text-gray-700">June 7th, 2004</span>
+                        </div>
+                        <div class="birthplace">
+                          <span class="block text-gray-700/75">Place of Birth:</span>
+                          <span class="block text-lg font-semibold text-gray-700">Bujumbura, Burundi</span>
+                        </div>
+                        <div class="gender">
+                          <span class="block text-gray-700/75">Gender:</span>
+                          <span class="block text-lg font-semibold text-gray-700">Male</span>
+                        </div>
+                      </div>
+
+                      <div class="w-48 h-48 ml-auto">
+                        <img src="svg/QR.svg.png" alt="">
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 overflow-hidden rounded-lg shadow-sm activities shadow-gray-700/20">
+                <div class="flex border-b border-gray-700">
+                  <div class="flex-1 px-4 py-2 duration-150 hover:bg-green-300/75">
+                    <span class="text-lg font-semibold text-gray-700">
+
+                      Active
+                    </span>
+                  </div>
+                  <div class="flex-1 px-4 py-2 duration-150 hover:bg-green-300/75">
+                    <span class="text-lg font-semibold text-gray-700">
+
+
+                      History
+                    </span>
+                  </div>
+                </div>
+                <div class="acts">
+                  <div class="px-4 pt-4">
+
+                  </div>
                 </div>
               </div>
             </div>
