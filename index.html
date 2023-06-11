@@ -33,8 +33,15 @@
               class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Students</button>
           </div>
           <div class="overflow-hidden duration-150 rounded-lg nav__link link__3" data-tab="3">
-            <button
-              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">History</button>
+            <button data-notice-btn
+              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Notifications
+              <span data-new
+                class="hidden relative p-1 z-[1] text-sm font-semibold text-center text-white bg-red-500 rounded-full bounceNotif">new</span>
+
+            </button>
+
+
+
           </div>
           <div class="overflow-hidden duration-150 rounded-lg nav__link link__4" data-tab="4">
             <button
@@ -60,7 +67,7 @@
     </div>
     <div class="flex-1 content__block">
       <section class="addStudent__section tab-content tab-content--active section__1">
-        <div class="min-h-screen ">
+        <div class="min-h-screen">
           <div class="container pt-20 px-14">
             <div class="mb-12 section__title">
               <h1 class="mb-2 text-2xl font-bold tracking-widest text-center text-gray-700">Student Registration</h1>
@@ -72,7 +79,7 @@
               </div>
               <div class="px-12 py-6 rounded-lg shadow-md info__form shadow-gray-700/20 ">
                 <div class="">
-                  <form action="#" method="post">
+                  <form action="index.html" data-form method="post">
                     <div class="flex gap-10 names">
                       <label class="flex-1" for="firstname">
                         <span class="block mb-1 text-gray-700">Firstname</span>
@@ -140,11 +147,12 @@
                     </button>
                   </form>
                 </div>
-
+                <!-- 
                 <div class="flex items-center justify-center gap-5">
                   <img src="svg/done.svg" alt="" class="w-16 h-16">
                   <span class="text-xl font-bold text-gray-700">Student added successfully</span>
                 </div>
+                -->
 
               </div>
             </div>
@@ -179,7 +187,7 @@
           </div>
         </div>
 
-        <div class="flex-1 hidden studentProfile min-h-screen">
+        <div class="flex-1 hidden min-h-screen studentProfile">
           <div class="container pt-20 px-14">
             <div class="mt-10 profile">
               <div class="px-4 py-2 border-b border-gray-700">
@@ -265,7 +273,51 @@
 
       </section>
       <section class="history__section tab-content section__3">
-        boss
+        <div class="flex-1 hidden-min-h-screen">
+          <div class="container pt-20 px-14">
+            <div class="mb-12 section__title">
+              <h1 class="mb-2 text-2xl font-bold tracking-widest text-center text-gray-700">
+                Notifications
+              </h1>
+            </div>
+            <div class="mt-10 notification">
+              <div class="flex items-center gap-5 p-4 rounded-lg shadow-sm shadow-gray-700/20">
+                <div class="w-16 h-16 overflow-hidden rounded-full">
+                  <img src="svg/added.svg" alt="" class="w-full">
+                </div>
+                <div class="notify">
+                  <div class="text-xl font-semibold text-green-500">Student successfully added</div>
+                  <div class="text-gray-700/90">
+                    June 10th, 2023
+                  </div>
+                </div>
+                <button
+                  class="px-4 py-2 ml-auto font-bold text-gray-700 duration-150 bg-green-300 rounded-lg hover:bg-gray-700 hover:text-green-300 ">See
+                  more</button>
+
+              </div>
+
+              <div class="flex items-center gap-5 p-4 rounded-lg shadow-sm shadow-gray-700/20">
+                <div class="w-16 h-16 overflow-hidden rounded-full">
+                  <img src="svg/added.svg" alt="" class="w-full">
+                </div>
+                <div class="notify">
+                  <div class="text-xl font-semibold text-red-500">Subscription expired</div>
+                  <div class="text-gray-700/90">
+                    John Hakizimana
+                  </div>
+                  <div class="text-gray-700/90">
+                    June 10th, 2023
+                  </div>
+                </div>
+                <button
+                  class="px-4 py-2 ml-auto font-bold text-gray-700 duration-150 bg-green-300 rounded-lg hover:bg-gray-700 hover:text-green-300 ">See
+                  more</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="paidStudent__section tab-content section__4">
         uramez
