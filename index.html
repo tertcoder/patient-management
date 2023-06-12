@@ -37,22 +37,15 @@
               class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Notifications
               <span data-new
                 class="hidden relative p-1 z-[1] text-sm font-semibold text-center text-white bg-red-500 rounded-full bounceNotif">new</span>
-
             </button>
-
-
-
           </div>
           <div class="overflow-hidden duration-150 rounded-lg nav__link link__4" data-tab="4">
             <button
-              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Paid
-              Student</button>
+              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">
+              Delete Student
+            </button>
           </div>
-          <div class="overflow-hidden duration-150 rounded-lg nav__link link__5" data-tab="5">
-            <button
-              class="w-full px-4 py-2 duration-150 border-l border-gray-700 hover:border-none hover:bg-gray-700 hover:text-green-300 text-start ">Unpaid
-              Student</button>
-          </div>
+
         </div>
 
         <div class="w-full py-8 mt-auto logo">
@@ -77,7 +70,7 @@
                 <p class="text-sm text-gray-700">*Provide all information of the new student</p>
                 <p class="text-sm text-gray-700">*Everything is required</p>
               </div>
-              <div class="px-12 py-6 rounded-lg shadow-md info__form shadow-gray-700/20 ">
+              <div class="px-12 py-6 rounded-lg shadow-md info__form shadow-gray-700/20 rounded-lg/20 ">
                 <div class="">
                   <form action="index.html" data-form method="post">
                     <div class="flex gap-10 names">
@@ -133,6 +126,7 @@
                           class="block w-full px-4 py-2 border border-gray-700 rounded-lg outline-none">
                       </label>
                     </div>
+                    <!-- 
                     <label for="profile" class="block mt-4 ">
                       <span class="block mb-1 text-gray-700">Upload your profile</span>
                       <div class="w-24 h-24 bg-gray-700 rounded-lg">
@@ -140,8 +134,17 @@
                       </div>
                       <input type="file" id="profile" class="hidden opacity-0">
                     </label>
+                    -->
+
+                    <label for="profile" class="block mt-4">
+                      <span class="block mb-1 text-gray-700">Choose profile photo</span>
+                      <input type="file"
+                        class="block w-full text-sm text-gray-700 duration-150 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-300 file:text-gray-700 hover:file:bg-gray-700 hover:file:text-green-300">
+                    </label>
+
+
                     <button
-                      class="px-4 py-2 mt-6 font-bold tracking-wider text-gray-700 duration-150 ease-in-out bg-green-300 rounded-lg btn hover:bg-gray-700 hover:text-green-300">
+                      class="px-4 py-2 mt-10 font-bold tracking-wider text-gray-700 duration-150 ease-in-out bg-green-300 rounded-lg btn hover:bg-gray-700 hover:text-green-300">
                       Add
                       Student
                     </button>
@@ -167,7 +170,7 @@
             </div>
             <div class="mt-10 students">
               <div
-                class="flex items-center justify-center gap-5 p-2 rounded-lg shadow-sm shadow-gray-700/20 student__container">
+                class="flex items-center justify-center gap-5 p-2 rounded-lg shadow-sm shadow-gray-700/20 rounded-lg/20 student__container">
                 <div class="w-24 h-24 overflow-hidden border-4 border-green-300 rounded-full student__profile">
                   <img src="svg/toussaint.jpeg" class="w-full" alt="profile">
                 </div>
@@ -245,7 +248,7 @@
                   </div>
                 </div>
               </div>
-              <div class="mt-4 overflow-hidden rounded-lg shadow-sm activities shadow-gray-700/20">
+              <div class="mt-4 overflow-hidden rounded-lg shadow-sm activities shadow-gray-700/20 rounded-lg/20">
                 <div class="flex border-b border-gray-700">
                   <div class="flex-1 px-4 py-2 duration-150 hover:bg-green-300/75">
                     <span class="text-lg font-semibold text-gray-700">
@@ -281,7 +284,7 @@
               </h1>
             </div>
             <div class="mt-10 notification">
-              <div class="flex items-center gap-5 p-4 rounded-lg shadow-sm shadow-gray-700/20">
+              <div class="flex items-center gap-5 p-4 rounded-lg shadow-sm shadow-gray-700/20 rounded-lg/20">
                 <div class="w-16 h-16 overflow-hidden rounded-full">
                   <img src="svg/added.svg" alt="" class="w-full">
                 </div>
@@ -297,9 +300,9 @@
 
               </div>
 
-              <div class="flex items-center gap-5 p-4 rounded-lg shadow-sm shadow-gray-700/20">
+              <div class="flex items-center gap-5 p-4 rounded-lg shadow-sm shadow-gray-700/20 rounded-lg/20">
                 <div class="w-16 h-16 overflow-hidden rounded-full">
-                  <img src="svg/added.svg" alt="" class="w-full">
+                  <img src="svg/alert.svg" alt="" class="w-full">
                 </div>
                 <div class="notify">
                   <div class="text-xl font-semibold text-red-500">Subscription expired</div>
@@ -320,10 +323,53 @@
         </div>
       </section>
       <section class="paidStudent__section tab-content section__4">
-        uramez
-      </section>
-      <section class="unpaidStudent__section tab-content section__5">
-        nezaa
+        <div class="flex-1 min-h-screen studentProfiles">
+          <div class="container pt-20 px-14">
+            <div class="mb-12 section__title">
+              <h1 class="mb-2 text-2xl font-bold tracking-widest text-center text-gray-700">Registered Students</h1>
+            </div>
+            <div class="mt-10 students">
+              <div
+                class="flex items-center justify-center gap-5 p-2 rounded-lg shadow-sm shadow-gray-700/20 rounded-lg/20 student__container">
+                <div class="w-24 h-24 overflow-hidden border-4 border-green-300 rounded-full student__profile">
+                  <img src="svg/toussaint.jpeg" class="w-full" alt="profile">
+                </div>
+                <div class=" student__details">
+                  <div class="text-xl font-semibold text-gray-700 student__fullname">Toussaint Iradukunda</div>
+                  <div class=" text-gray-700/90">No 573920</div>
+                  <div class=" text-gray-700/90">Registered on June 6th, 2023</div>
+                  <div class=" text-gray-700/90">Bujumbura, Burundi</div>
+                </div>
+                <div class="ml-auto action">
+
+                  <button class="px-4 py-2 font-bold text-gray-700 bg-red-300 rounded-lg dilemmaPopup">Delete</button>
+
+                  <div class="hidden modalPopup">
+                    <div class="absolute inset-0 z-10 backBlur bg-black-500/50 backdrop-blur-sm"></div>
+                    <div
+                      class="absolute z-20 p-8 -translate-x-1/2 -translate-y-1/2 border rounded-lg shadow-md bg-white/80 border-gray-700/20 top-1/2 left-1/2 shadow-gray-700/20">
+                      <p class="text-lg font-semibold text-center">Do you really want to delete this student?</p>
+                      <p class="text-gray-700/75">*if you delete this student, he/she will be deleted definitively</p>
+                      <div class="flex items-center justify-center gap-5 mt-6">
+                        <button
+                          class="px-4 py-2 font-bold text-gray-700 duration-150 bg-green-300 rounded-lg hover:bg-gray-700 hover:text-green-300">Yes</button>
+                        <button
+                          class="px-4 py-2 font-bold text-gray-700 bg-red-300 rounded-lg closePopupBtn">No</button>
+                      </div>
+
+                      <div
+                        class="absolute top-0 right-0 w-10 h-10 p-2 overflow-hidden translate-x-1/2 -translate-y-1/2 bg-white border rounded-full closePopup border-gray-700/20">
+                        <img src="svg/close.svg" class="w-full" alt="">
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 

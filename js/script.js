@@ -4,6 +4,15 @@ const openProfile = document.querySelector(".btnOpen");
 const profilesContainer = document.querySelector(".studentProfiles");
 const studentProfile = document.querySelector(".studentProfile");
 
+const form = document.querySelector("[data-form]");
+const newModal = document.querySelector("[data-new]");
+const noticeBtn = document.querySelector("[data-notice-btn]");
+
+const popBtn = document.querySelector(".dilemmaPopup");
+const modalPopup = document.querySelector(".modalPopup");
+const closePopup = document.querySelector(".closePopup");
+const closePopupBtn = document.querySelector(".closePopupBtn");
+
 linksContainer.addEventListener("click", function (e) {
   const link_clicked = e.target.closest(".nav__link");
 
@@ -22,9 +31,6 @@ openProfile.addEventListener("click", function (e) {
   studentProfile.classList.remove("hidden");
 });
 
-const form = document.querySelector("[data-form]");
-const newModal = document.querySelector("[data-new]");
-const noticeBtn = document.querySelector("[data-notice-btn]");
 form.onsubmit = () => {
   localStorage.setItem("newNotice", "1");
 };
@@ -39,3 +45,19 @@ noticeBtn.addEventListener("click", () => {
   localStorage.setItem("newNotice", false);
   newModal.classList.add("hidden");
 });
+
+const popup = function () {
+  modalPopup.classList.remove("hidden");
+};
+const close = function () {
+  modalPopup.classList.add("hidden");
+};
+popBtn.addEventListener("click", popup);
+closePopup.addEventListener("click", close);
+modalPopup.addEventListener("click", function (e) {
+  const blury = e.target.closest(".backBlur");
+  if (!blury) return;
+
+  close();
+});
+closePopupBtn.addEventListener("click", close);
